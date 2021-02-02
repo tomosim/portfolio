@@ -5,8 +5,10 @@ import { useState } from "react";
 import { BackgroundGrad } from "./Styled/BackgroundGrad";
 import { Header } from "./Styled/Header";
 import { Content } from "./Styled/Content";
+import { Image } from "./Styled/Image";
 import EmailForm from "./Components/EmailForm";
 import Settings from "./Components/Settings";
+import { About } from "./Styled/About";
 
 function App() {
   const [activePanel, setActivePanel] = useState(0);
@@ -23,18 +25,22 @@ function App() {
           <Header>Tom</Header>
           {activePanel === 0 && (
             <Content>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Deserunt, rem ea accusamus sunt, nemo unde dolore, autem
-                provident possimus consectetur qui similique repellat laudantium
-                accusantium earum excepturi quos numquam placeat!{" "}
-              </p>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla
-                quidem at autem voluptatibus repellat earum adipisci nostrum
-                velit tempora, vero obcaecati aspernatur veritatis quas
-                doloremque dignissimos molestiae hic suscipit perferendis.
-              </p>
+              <About>
+                <Image src="/img/me.jpg" alt="A smiling Tom" />
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Deserunt, rem ea accusamus sunt, nemo unde dolore, autem
+                  provident possimus consectetur qui similique repellat
+                  laudantium accusantium earum excepturi quos numquam placeat!{" "}
+                </p>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Nulla quidem at autem voluptatibus repellat earum adipisci
+                  nostrum velit tempora, vero obcaecati aspernatur veritatis
+                  quas doloremque dignissimos molestiae hic suscipit
+                  perferendis.
+                </p>
+              </About>
             </Content>
           )}
         </Panel>
