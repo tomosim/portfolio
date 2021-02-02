@@ -13,6 +13,7 @@ export const Panel = styled.div`
     props.nightMode ? "rgb(240, 240, 240)" : "rgb(36, 36, 36)"};
   display: flex;
   justify-content: ${(props) => (props.active ? "space-between" : "center")};
+  // justify-content: center;
   align-items: center;
   cursor: pointer;
   &.active {

@@ -33,9 +33,8 @@ function App() {
           {activePanel === 0 && (
             <Content>
               <About>
-                <Image src="/img/me.jpg" alt="A smiling Tom" />
+                <Image src="img/me.jpg" alt="A smiling Tom" />
                 <Paragraph>Hi, I'm Tom.</Paragraph>
-                <Emoji>🏄‍♂️</Emoji>
                 <Paragraph>
                   I'm a lecturer, mentor, and developer living in Berlin.
                 </Paragraph>
@@ -61,8 +60,8 @@ function App() {
                     <Logo
                       src={
                         nightMode
-                          ? "/img/linkedin-logo-light.png"
-                          : "/img/linkedin-logo-dark.png"
+                          ? "./img/linkedin-logo-light.png"
+                          : "./img/linkedin-logo-dark.png"
                       }
                       alt="linkedin"
                     />
@@ -71,8 +70,8 @@ function App() {
                     <Logo
                       src={
                         nightMode
-                          ? "/img/github-logo-light.png"
-                          : "/img/github-logo-dark.png"
+                          ? "./img/github-logo-light.png"
+                          : "./img/github-logo-dark.png"
                       }
                       alt="github"
                     />
