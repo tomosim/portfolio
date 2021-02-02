@@ -6,11 +6,14 @@ import { BackgroundGrad } from "./Styled/BackgroundGrad";
 import { Header } from "./Styled/Header";
 import { Content } from "./Styled/Content";
 import EmailForm from "./Components/EmailForm";
+import Settings from "./Components/Settings";
 
 function App() {
   const [activePanel, setActivePanel] = useState(0);
+  const [colorOne, setColorOne] = useState([0, 100, 200]);
+  const [colorTwo, setColorTwo] = useState([255, 255, 222, 1]);
   return (
-    <BackgroundGrad>
+    <BackgroundGrad colorOne={colorOne} colorTwo={colorTwo}>
       <Panels>
         <Panel
           className={activePanel === 0 && "active"}
@@ -71,7 +74,16 @@ function App() {
           active={activePanel === 4}
         >
           <Header>Settings</Header>
-          {activePanel === 4 && <Content></Content>}
+          {activePanel === 4 && (
+            <Content>
+              <Settings
+                colorOne={colorOne}
+                setColorOne={setColorOne}
+                colorTwo={colorTwo}
+                setColorTwo={setColorTwo}
+              />
+            </Content>
+          )}
         </Panel>
       </Panels>
     </BackgroundGrad>
