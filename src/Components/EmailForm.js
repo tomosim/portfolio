@@ -4,6 +4,7 @@ import { Form } from "../Styled/Form";
 import { FormLabel } from "../Styled/FormLabel";
 import { FormInput } from "../Styled/FormInput";
 import { FormButton } from "../Styled/FormButton";
+import { Emoji } from "../Styled/Emoji";
 
 const EmailForm = ({ nightMode }) => {
   const [name, setName] = useState("");
@@ -72,18 +73,19 @@ const EmailForm = ({ nightMode }) => {
         ></FormInput>
       </FormLabel>
 
+      <FormButton nightMode={nightMode}>Send</FormButton>
       {error !== null && (
         <>
-          <h3>🥴</h3>
+          <Emoji>🥴</Emoji>
           <p>Sorry, something went wrong. Please try again later.</p>
         </>
       )}
       {success && (
         <>
-          <p>💌 Thanks! I'll reply as soon as possible. 💌</p>
+          <Emoji>💌</Emoji>
+          <p>Thanks! I'll reply as soon as possible.</p>
         </>
       )}
-      <FormButton nightMode={nightMode}>Send</FormButton>
     </Form>
   );
 };

@@ -14,7 +14,9 @@ export const Panel = styled.div`
   display: flex;
   justify-content: ${(props) => (props.active ? "space-between" : "center")};
   align-items: center;
+  cursor: pointer;
   &.active {
     flex: 5;
+    cursor: default;
   }
 `;

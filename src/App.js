@@ -9,11 +9,15 @@ import { Image } from "./Styled/Image";
 import EmailForm from "./Components/EmailForm";
 import Settings from "./Components/Settings";
 import { About } from "./Styled/About";
+import { Paragraph } from "./Styled/Paragraph";
+import { Emoji } from "./Styled/Emoji";
+import { Logo } from "./Styled/Logo";
+import { LogoWrapper } from "./Styled/LogoWrapper";
 
 function App() {
   const [activePanel, setActivePanel] = useState(0);
-  const [colorOne, setColorOne] = useState([0, 100, 200]);
-  const [colorTwo, setColorTwo] = useState([255, 255, 222, 1]);
+  const [colorOne, setColorOne] = useState([0, 240, 255]);
+  const [colorTwo, setColorTwo] = useState([255, 80, 222, 1]);
   const [nightMode, setNightMode] = useState(true);
 
   return (
@@ -30,19 +34,50 @@ function App() {
             <Content>
               <About>
                 <Image src="/img/me.jpg" alt="A smiling Tom" />
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Deserunt, rem ea accusamus sunt, nemo unde dolore, autem
-                  provident possimus consectetur qui similique repellat
-                  laudantium accusantium earum excepturi quos numquam placeat!{" "}
-                </p>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Nulla quidem at autem voluptatibus repellat earum adipisci
-                  nostrum velit tempora, vero obcaecati aspernatur veritatis
-                  quas doloremque dignissimos molestiae hic suscipit
-                  perferendis.
-                </p>
+                <Paragraph>Hi, I'm Tom.</Paragraph>
+                <Emoji>🏄‍♂️</Emoji>
+                <Paragraph>
+                  I'm a lecturer, mentor, and developer living in Berlin.
+                </Paragraph>
+                <Paragraph>
+                  I have over two years of experience working in the tech
+                  industry, both as an educator and a developer. In my previous
+                  role at <a href="https://northcoders.com/">Northcoders</a>, a
+                  web development bootcamp, I lectured students and collaborated
+                  on in-house projects developing tools for the classroom team.
+                </Paragraph>
+                <Paragraph>
+                  I have a very strong understanding of computer science
+                  fundamentals, backend, and frontend technologies. My greatest
+                  strengths stem from my experience as a lecturer and mentor; I
+                  am empathetic, a good communicator, and a team player.
+                </Paragraph>
+                <Paragraph>
+                  In my spare time you'll find me at the climbing wall, riding
+                  my bike, or skating the streets.
+                </Paragraph>
+                <LogoWrapper>
+                  <a href="https://www.linkedin.com/in/tom-sim/">
+                    <Logo
+                      src={
+                        nightMode
+                          ? "/img/linkedin-logo-light.png"
+                          : "/img/linkedin-logo-dark.png"
+                      }
+                      alt="linkedin"
+                    />
+                  </a>
+                  <a href="https://github.com/tomosim">
+                    <Logo
+                      src={
+                        nightMode
+                          ? "/img/github-logo-light.png"
+                          : "/img/github-logo-dark.png"
+                      }
+                      alt="github"
+                    />
+                  </a>
+                </LogoWrapper>
               </About>
             </Content>
           )}
