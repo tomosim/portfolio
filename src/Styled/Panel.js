@@ -7,8 +7,10 @@ export const Panel = styled.div`
   flex: 0.5;
   transition: 0.4s;
   overflow: hidden;
-  background-color: rgb(36, 36, 36);
-  color: white;
+  background-color: ${(props) =>
+    props.nightMode ? "rgb(36, 36, 36)" : "rgb(240, 240, 240)"};
+  color: ${(props) =>
+    props.nightMode ? "rgb(240, 240, 240)" : "rgb(36, 36, 36)"};
   display: flex;
   justify-content: ${(props) => (props.active ? "space-between" : "center")};
   align-items: center;

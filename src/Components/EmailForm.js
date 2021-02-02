@@ -5,7 +5,7 @@ import { FormLabel } from "../Styled/FormLabel";
 import { FormInput } from "../Styled/FormInput";
 import { FormButton } from "../Styled/FormButton";
 
-const EmailForm = () => {
+const EmailForm = ({ nightMode }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -45,6 +45,7 @@ const EmailForm = () => {
           onChange={(e) => {
             setName(e.target.value);
           }}
+          nightMode={nightMode}
         />
       </FormLabel>
       <FormLabel>
@@ -56,6 +57,7 @@ const EmailForm = () => {
           onChange={(e) => {
             setEmail(e.target.value);
           }}
+          nightMode={nightMode}
         />
       </FormLabel>
       <FormLabel>
@@ -66,6 +68,7 @@ const EmailForm = () => {
           onChange={(e) => {
             setMessage(e.target.value);
           }}
+          nightMode={nightMode}
         ></FormInput>
       </FormLabel>
 
@@ -80,7 +83,7 @@ const EmailForm = () => {
           <p>💌 Thanks! I'll reply as soon as possible. 💌</p>
         </>
       )}
-      <FormButton>Send</FormButton>
+      <FormButton nightMode={nightMode}>Send</FormButton>
     </Form>
   );
 };
