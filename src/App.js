@@ -5,6 +5,7 @@ import { useState } from "react";
 import { BackgroundGrad } from "./Styled/BackgroundGrad";
 import { Header } from "./Styled/Header";
 import { Content } from "./Styled/Content";
+import EmailForm from "./Components/EmailForm";
 
 function App() {
   const [activePanel, setActivePanel] = useState(0);
@@ -48,7 +49,13 @@ function App() {
           active={activePanel === 2}
         >
           <Header>Contact</Header>
-          {activePanel === 2 && <Content></Content>}
+          {activePanel === 2 && (
+            <Content>
+              <h2>Get in contact with me</h2>
+              <p>Fill out the form below to send me an email.</p>
+              <EmailForm />
+            </Content>
+          )}
         </Panel>
         <Panel
           className={activePanel === 3 && "active"}
