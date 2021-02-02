@@ -4,6 +4,7 @@ const Slider = styled.input`
   -webkit-appearance: none; /* Override default CSS styles */
   appearance: none;
   height: 5px; /* Specified height */
+  border-radius: 3px;
   margin: 8px 4px;
   // background: ${(props) => (props.nightMode ? "white" : "black")};
   background: white;
