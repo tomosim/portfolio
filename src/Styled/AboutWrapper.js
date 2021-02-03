@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const About = styled.section`
+export const AboutWrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
