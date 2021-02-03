@@ -4,11 +4,16 @@ import { Mugshot } from "../Styled/Mugshot";
 import { Paragraph } from "../Styled/Paragraph";
 import { LogoWrapper } from "../Styled/LogoWrapper";
 import { Logo } from "../Styled/Logo";
+import Me from "../Images/me.jpg";
+import GithubLogoLight from "../Images/logos/github-logo-light.png";
+import GithubLogoDark from "../Images/logos/github-logo-dark.png";
+import LinkedInLogoLight from "../Images/logos/linkedin-logo-light.png";
+import LinkedInLogoDark from "../Images/logos/linkedin-logo-dark.png";
 
 const About = ({ nightMode }) => {
   return (
     <AboutWrapper>
-      <Mugshot src="./img/me.jpg" alt="A smiling Tom" />
+      <Mugshot src={Me} alt="A smiling Tom" />
       <Paragraph>Hi, I'm Tom.</Paragraph>
       <Paragraph>
         I'm a lecturer, mentor, and developer living in Berlin.
@@ -33,21 +38,13 @@ const About = ({ nightMode }) => {
       <LogoWrapper>
         <a href="https://www.linkedin.com/in/tom-sim/">
           <Logo
-            src={
-              nightMode
-                ? "./img/linkedin-logo-light.png"
-                : "./img/linkedin-logo-dark.png"
-            }
+            src={nightMode ? LinkedInLogoLight : LinkedInLogoDark}
             alt="linkedin"
           />
         </a>
         <a href="https://github.com/tomosim">
           <Logo
-            src={
-              nightMode
-                ? "./img/github-logo-light.png"
-                : "./img/github-logo-dark.png"
-            }
+            src={nightMode ? GithubLogoLight : GithubLogoDark}
             alt="github"
           />
         </a>
