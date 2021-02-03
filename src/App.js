@@ -5,13 +5,8 @@ import { useState } from "react";
 import { BackgroundGrad } from "./Styled/BackgroundGrad";
 import { Header } from "./Styled/Header";
 import { Content } from "./Styled/Content";
-import { Image } from "./Styled/Image";
 import EmailForm from "./Components/EmailForm";
 import Settings from "./Components/Settings";
-import { AboutWrapper } from "./Styled/AboutWrapper";
-import { Paragraph } from "./Styled/Paragraph";
-import { Logo } from "./Styled/Logo";
-import { LogoWrapper } from "./Styled/LogoWrapper";
 import About from "./Components/About";
 
 function App() {
