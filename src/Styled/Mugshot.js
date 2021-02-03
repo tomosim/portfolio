@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Image = styled.img`
+export const Mugshot = styled.img`
   height: 200px;
   border-radius: 100px;
 `;

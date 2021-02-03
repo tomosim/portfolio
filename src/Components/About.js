@@ -1,6 +1,6 @@
 import React from "react";
 import { AboutWrapper } from "../Styled/AboutWrapper";
-import { Image } from "../Styled/Image";
+import { Mugshot } from "../Styled/Mugshot";
 import { Paragraph } from "../Styled/Paragraph";
 import { LogoWrapper } from "../Styled/LogoWrapper";
 import { Logo } from "../Styled/Logo";
@@ -8,7 +8,7 @@ import { Logo } from "../Styled/Logo";
 const About = ({ nightMode }) => {
   return (
     <AboutWrapper>
-      <Image src="./img/me.jpg" alt="A smiling Tom" />
+      <Mugshot src="./img/me.jpg" alt="A smiling Tom" />
       <Paragraph>Hi, I'm Tom.</Paragraph>
       <Paragraph>
         I'm a lecturer, mentor, and developer living in Berlin.

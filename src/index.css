@@ -12,6 +12,16 @@ code {
     monospace;
 }
 
+a {
+  color: inherit;
+}
+
 a:visited {
   color: inherit;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
