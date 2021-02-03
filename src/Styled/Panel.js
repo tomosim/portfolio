@@ -20,4 +20,11 @@ export const Panel = styled.div`
     flex: 5;
     cursor: default;
   }
+  @media (max-width: 1025px) {
+    flex-direction: column;
+    margin: 5px 0.5vw;
+    &.active {
+      flex: 10;
+    }
+  }
 `;

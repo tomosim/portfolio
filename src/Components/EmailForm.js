@@ -50,7 +50,7 @@ const EmailForm = ({ nightMode }) => {
         />
       </FormLabel>
       <FormLabel>
-        email address:{" "}
+        Email Address:{" "}
         <FormInput
           type="text"
           value={email}

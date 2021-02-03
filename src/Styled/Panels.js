@@ -6,4 +6,7 @@ export const Panels = styled.li`
   height: 100vh;
   display: flex;
   flex-direction: row;
+  @media (max-width: 1025px) {
+    flex-direction: column;
+  }
 `;
