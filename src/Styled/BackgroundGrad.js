@@ -37,7 +37,7 @@ export const BackgroundGrad = styled.div`
       100%
   );
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#95ECB0", endColorstr="#F3F98A", GradientType=1 );
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+  font-family: "Poppins", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   @media (max-width: 1025px) {
     background: ${(props) =>
