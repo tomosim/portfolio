@@ -22,14 +22,12 @@ const EmailForm = ({ nightMode }) => {
 
     emailjs.sendForm(serviceID, templateID, e.target, userID).then(
       (result) => {
-        console.log(result.text);
         setName("");
         setEmail("");
         setMessage("");
         setSuccess(true);
       },
       (error) => {
-        console.log(error.text);
         setError(error);
       }
     );
