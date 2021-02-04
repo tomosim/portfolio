@@ -37,6 +37,18 @@ const EmailForm = ({ nightMode }) => {
 
   return (
     <Form onSubmit={handleSubmit}>
+      {error !== null && (
+        <>
+          <Emoji>🥴</Emoji>
+          <p>Sorry, something went wrong. Please try again later.</p>
+        </>
+      )}
+      {success && (
+        <>
+          <Emoji>💌</Emoji>
+          <p>Thanks! I'll reply as soon as possible.</p>
+        </>
+      )}
       <FormLabel>
         Name:{" "}
         <FormInput
@@ -72,20 +84,7 @@ const EmailForm = ({ nightMode }) => {
           nightMode={nightMode}
         ></FormInput>
       </FormLabel>
-
       <FormButton nightMode={nightMode}>Send</FormButton>
-      {error !== null && (
-        <>
-          <Emoji>🥴</Emoji>
-          <p>Sorry, something went wrong. Please try again later.</p>
-        </>
-      )}
-      {success && (
-        <>
-          <Emoji>💌</Emoji>
-          <p>Thanks! I'll reply as soon as possible.</p>
-        </>
-      )}
     </Form>
   );
 };
