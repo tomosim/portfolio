@@ -13,8 +13,8 @@ import CV from "./Components/CV";
 
 function App() {
   const [activePanel, setActivePanel] = useState(0);
-  const [colorOne, setColorOne] = useState([0, 240, 255]);
-  const [colorTwo, setColorTwo] = useState([255, 80, 222, 1]);
+  const [colorOne, setColorOne] = useState([222, 255, 1]);
+  const [colorTwo, setColorTwo] = useState([1, 211, 248]);
   const [nightMode, setNightMode] = useState(true);
 
   return (
