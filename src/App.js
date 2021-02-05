@@ -1,7 +1,7 @@
 import "./App.css";
 import { Panel } from "./Styled/Panel";
 import { Panels } from "./Styled/Panels";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BackgroundGrad } from "./Styled/BackgroundGrad";
 import { Header } from "./Styled/Header";
 import { Content } from "./Styled/Content";
@@ -12,48 +12,61 @@ import Projects from "./Components/Projects";
 import CV from "./Components/CV";
 
 function App() {
-  const [activePanel, setActivePanel] = useState(0);
+  const [activePanel, setActivePanel] = useState("");
   const [colorOne, setColorOne] = useState([222, 255, 1]);
   const [colorTwo, setColorTwo] = useState([1, 211, 248]);
   const [nightMode, setNightMode] = useState(true);
+
+  useEffect(() => {
+    if (window.location.hash !== "") {
+      setActivePanel(window.location.hash.slice(1));
+    } else {
+      setActivePanel("Tom");
+    }
+  }, []);
+
+  const onPanelClick = (name) => {
+    window.location.hash = name;
+    setActivePanel(name);
+  };
 
   return (
     <BackgroundGrad colorOne={colorOne} colorTwo={colorTwo}>
       <Panels>
         <Panel
-          className={activePanel === 0 && "active"}
-          onClick={() => setActivePanel(0)}
-          active={activePanel === 0}
+          className={activePanel === "tom" && "active"}
+          onClick={() => onPanelClick("tom")}
+          active={activePanel === "tom"}
           nightMode={nightMode}
         >
           <Header>Tom</Header>
-          {activePanel === 0 && (
+          {activePanel === "tom" && (
             <Content>
               <About nightMode={nightMode} />
             </Content>
           )}
         </Panel>
         <Panel
-          className={activePanel === 1 && "active"}
-          onClick={() => setActivePanel(1)}
-          active={activePanel === 1}
+          className={activePanel === "projects" && "active"}
+          onClick={() => onPanelClick("projects")}
+          active={activePanel === "projects"}
           nightMode={nightMode}
         >
           <Header>Projects</Header>
-          {activePanel === 1 && (
+          {activePanel === "projects" && (
             <Content>
               <Projects nightMode={nightMode} />
             </Content>
           )}
         </Panel>
         <Panel
-          className={activePanel === 2 && "active"}
-          onClick={() => setActivePanel(2)}
-          active={activePanel === 2}
+          className={activePanel === "contact" && "active"}
+          onClick={() => onPanelClick("contact")}
+          active={activePanel === "contact"}
           nightMode={nightMode}
         >
           <Header>Contact</Header>
-          {activePanel === 2 && (
+          {activePanel === "contact" && (
             <Content>
               <h2>Get in contact with me</h2>
               <p>Fill out the form below to send me an email.</p>
@@ -62,26 +75,28 @@ function App() {
           )}
         </Panel>
         <Panel
-          className={activePanel === 3 && "active"}
-          onClick={() => setActivePanel(3)}
-          active={activePanel === 3}
+          className={activePanel === "cv" && "active"}
+          onClick={() => onPanelClick("cv")}
+          active={activePanel === "cv"}
           nightMode={nightMode}
         >
           <Header>CV</Header>
-          {activePanel === 3 && (
+          {activePanel === "cv" && (
             <Content>
               <CV />
             </Content>
           )}
         </Panel>
         <Panel
-          className={activePanel === 4 && "active"}
-          onClick={() => setActivePanel(4)}
-          active={activePanel === 4}
+          className={activePanel === "settings" && "active"}
+          onClick={() => {
+            onPanelClick("settings");
+          }}
+          active={activePanel === "settings"}
           nightMode={nightMode}
         >
           <Header>Settings</Header>
-          {activePanel === 4 && (
+          {activePanel === "settings" && (
             <Content>
               <Settings
                 colorOne={colorOne}
