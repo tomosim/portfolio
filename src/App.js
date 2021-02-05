@@ -9,6 +9,7 @@ import EmailForm from "./Components/EmailForm";
 import Settings from "./Components/Settings";
 import About from "./Components/About";
 import Projects from "./Components/Projects";
+import CV from "./Components/CV";
 
 function App() {
   const [activePanel, setActivePanel] = useState(0);
@@ -67,7 +68,11 @@ function App() {
           nightMode={nightMode}
         >
           <Header>CV</Header>
-          {activePanel === 3 && <Content></Content>}
+          {activePanel === 3 && (
+            <Content>
+              <CV />
+            </Content>
+          )}
         </Panel>
         <Panel
           className={activePanel === 4 && "active"}
