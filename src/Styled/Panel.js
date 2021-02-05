@@ -13,7 +13,6 @@ export const Panel = styled.div`
     props.nightMode ? "rgb(240, 240, 240)" : "rgb(36, 36, 36)"};
   display: flex;
   justify-content: ${(props) => (props.active ? "space-between" : "center")};
-  // justify-content: center;
   align-items: center;
   cursor: pointer;
   &.active {
@@ -22,6 +21,7 @@ export const Panel = styled.div`
   }
   @media (max-width: 1025px) {
     flex-direction: column;
+    justify-content: center;
     margin: 5px 0.5vw;
     &.active {
       flex: 10;
