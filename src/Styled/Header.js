@@ -2,7 +2,10 @@ import styled from "styled-components";
 
 export const Header = styled.h1`
   transform: rotate(-90deg);
-  flex: 0.1;
+  // flex: 0.1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0;
   padding: 0;
   text-align: center;

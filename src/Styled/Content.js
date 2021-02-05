@@ -5,4 +5,8 @@ export const Content = styled.section`
   min-width: 70%;
   max-width: 800px;
   overflow-y: auto;
+  overflow-x: auto;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
 `;
